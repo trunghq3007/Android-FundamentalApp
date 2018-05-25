@@ -53,4 +53,16 @@ public class OtherActivity extends AppCompatActivity {
         super.onDestroy();
         Log.d("log", "onDestroy: OtherActivity");
     }
+
+    /**
+     * Show.
+     *
+     * @param x the x
+     * @param j the j
+     *
+     * @return the int
+     */
+    public int  show(int x, int j){
+        return x+j;
+    }
 }
