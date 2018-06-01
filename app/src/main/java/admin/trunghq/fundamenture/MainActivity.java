@@ -31,6 +31,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 // Phan comment
+
+        //Canh comment
         setContentView(R.layout.activity_main);
         Log.d("log", "MainActivity chay");
         Log.d(TAG, "onCreate: ");
