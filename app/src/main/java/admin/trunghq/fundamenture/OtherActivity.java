@@ -1,10 +1,12 @@
 package admin.trunghq.fundamenture;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 public class OtherActivity extends AppCompatActivity {
     private static final String TAG = "OtherActivity";
@@ -32,6 +34,12 @@ public class OtherActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        Intent intentFromMainActivity = getIntent();
+        String dataFromMainActivity = intentFromMainActivity.getStringExtra("key_data");
+        Toast.makeText(this, dataFromMainActivity, Toast.LENGTH_SHORT).show();
+        SinhVien objSinhVien = (SinhVien) intentFromMainActivity.getParcelableExtra("objSinhVien");
+        //int i = MainActivity.caculate(1, 3, 4, 5);
+        Toast.makeText(this, objSinhVien.toString(), Toast.LENGTH_SHORT).show();
         Log.d("log", "onResume: OtherActivity");
     }
 
@@ -62,7 +70,7 @@ public class OtherActivity extends AppCompatActivity {
      *
      * @return the int
      */
-    public int  show(int x, int j){
-        return x+j;
+    public int show(int x, int j) {
+        return x + j;
     }
 }
