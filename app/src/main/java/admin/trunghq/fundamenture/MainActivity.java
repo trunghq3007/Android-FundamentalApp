@@ -2,7 +2,6 @@ package admin.trunghq.fundamenture;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -44,9 +43,9 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 Log.d("log", "MainActivity onClick");
                 //Log.d("log","onClickOpenOtherActivity");
-                // Open OtherActivity Screen
+                // Open SecondActivity Screen
                 // khai báo và khởi tạo explicit intent
-                Intent intent = new Intent(MainActivity.this, OtherActivity.class);
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 // open activity
                 intent.putExtra("key_data", "dữ liệu truyền sang từ MainActivity");
                 sinhVien = new SinhVien("Truong Gia Binh",58);
