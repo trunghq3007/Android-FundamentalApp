@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
         buttonOpenOtherActivity = findViewById(R.id.btnOpenOtherActivity);
         btnOpenThreeActivity = findViewById(R.id.btnOpenThreeActivity);
 
-
+        Log.d(TAG, "onCreate: ád");
         buttonOpenOtherActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
